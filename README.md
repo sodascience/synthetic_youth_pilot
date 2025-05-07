@@ -15,15 +15,15 @@ To install the dependencies of this project, follow the following steps:
 ## Synthesizing data
 1. Obtain the following datasets from the YOUth study and put them in the `raw_data` folder: `CECPAQ_2.csv`, `M_DEMOGRAFY_1.csv`, `P_DEMOGRAFY_1.csv`, `P_LIFSTYLE_1_MED_STOREY.csv`, `P_LIFSTYLE_1_MEDICATIONY.csv`, `P_LIFSTYLE_1.csv`, `Q_1.csv`
 2. Obtain the following metadata files and put them in the `raw_data\metadata` folder: `YOUth_baby_en_kind-metadata.csv`, `YOUth_baby_en_kind-valuelabels.csv`.
-3. Create the synthetic data by running `uv run main.py`
+3. Create the synthetic data by running `uv run synthesize.py`
 
 Now, the folders `output/csv` and `output/gmf` should be populated with synthetic data and metadata, respectively:
 
 ```
 📁 synthetic_youth_pilot/
 ├── 📖 README.md
-├── 📄 analysis.py
-├── 📄 main.py
+├── 📄 test_analysis.py
+├── 📄 synthesize.py
 ├── pyproject.toml
 ├── uv.lock
 ├── 📁 raw_data/
