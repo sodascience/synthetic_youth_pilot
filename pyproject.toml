@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-metasyn = { git = "https://github.com/sodascience/metasyn", rev = "pb_synthesize" }
+metasyn = { git = "https://github.com/sodascience/metasyn", rev = "modules_export" }
 
 [tool.ruff]
 line-length = 100

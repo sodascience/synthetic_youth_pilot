@@ -42,6 +42,7 @@ def main():
         .group_by("decades")
         .agg(pl.col.paracetamol.mean())
         .sort(pl.col.decades)
+        .drop_nulls()
     )
 
     plot([(f"Age: {age * 10} - {age * 10 + 9}", round(prop, 2)) for age, prop in df_final.iter_rows()])
@@ -78,6 +79,7 @@ def main():
         .group_by("decades")
         .agg(pl.col.paracetamol.mean())
         .sort(pl.col.decades)
+        .drop_nulls()
     )
 
     plot([(f"Age: {age * 10} - {age * 10 + 9}", round(prop, 2)) for age, prop in df_final.iter_rows()])
