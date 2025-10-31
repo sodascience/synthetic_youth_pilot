@@ -11,8 +11,6 @@ CSV_OUTFOLDER = Path("output", "csv")
 GMF_OUTFOLDER = Path("output", "gmf")
 
 
-
-
 def main():
     # Reset out paths
     clean_dirs(CSV_OUTFOLDER, GMF_OUTFOLDER)
@@ -61,10 +59,8 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
-    # New api would be like this?
-    # df = mf.synthesize(seed=45)
-    # ms.write_csv(df, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### M_DEMOGRAFY_1 ###
     dname = "M_DEMOGRAFY_1"
@@ -91,7 +87,8 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### P_DEMOGRAFY_1 ###
     dname = "P_DEMOGRAFY_1"
@@ -106,12 +103,13 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### P_LIFSTYLE_1_MED_STOREY ###
     dname = "P_LIFSTYLE_1_MED_STOREY"
     print(f"Fitting and generating {dname}")
-    df, fmt = read_youth_csv(dname,metadata)
+    df, fmt = read_youth_csv(dname, metadata)
 
     mf = ms.MetaFrame.fit_dataframe(
         df=df,
@@ -121,12 +119,13 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### P_LIFSTYLE_1_MEDICATIONY ###
     dname = "P_LIFSTYLE_1_MEDICATIONY"
     print(f"Fitting and generating {dname}")
-    df, fmt = read_youth_csv(dname,metadata)
+    df, fmt = read_youth_csv(dname, metadata)
 
     mf = ms.MetaFrame.fit_dataframe(
         df=df,
@@ -136,7 +135,8 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### P_LIFSTYLE_1 ###
     dname = "P_LIFSTYLE_1"
@@ -156,7 +156,8 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
     ### Q_1 ###
     dname = "Q_1"
@@ -171,7 +172,8 @@ def main():
     )
     add_descriptions(mf, dname, metadata)
     mf.save(GMF_OUTFOLDER / f"{dname}.json")
-    mf.write_synthetic(CSV_OUTFOLDER / f"{dname}.csv", seed=45)
+    df_syn = mf.synthesize(seed=45)
+    ms.write_csv(df_syn, CSV_OUTFOLDER / f"{dname}.csv", file_format=fmt)
 
 
 if __name__ == "__main__":

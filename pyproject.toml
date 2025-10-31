@@ -6,14 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "asciibars>=0.0.3",
-    "metasyn-disclosure>=0.1.0",
-    "metasyn[extra]>=1.1.0",
+    "metasyn-disclosure>=0.2.0",
+    "metasyn[extra]>=2.0.0",
     "polars>=1.27.1",
     "ruff>=0.11.8",
 ]
-
-[tool.uv.sources]
-metasyn = { git = "https://github.com/sodascience/metasyn", rev = "modules_export" }
 
 [tool.ruff]
 line-length = 100
