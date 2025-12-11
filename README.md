@@ -2,7 +2,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
 ![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json) 
 
-This repository implements a pilot for creating privacy-friendly questionnaire datasets from the YOUth cohort. It is built on [metasyn](https://github.com/sodascience/metasyn) with the [disclosure control plugin](https://github.com/sodascience/metasyn-disclosure-control).
+This repository implements a pilot for creating privacy-friendly questionnaire datasets from the [YOUth cohort](https://www.uu.nl/en/research/youth-cohort-study). It is built on [metasyn](https://github.com/sodascience/metasyn) with the [disclosure control plugin](https://github.com/sodascience/metasyn-disclosure-control).
 
 ## Installation
 
